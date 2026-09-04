@@ -1,57 +1,1336 @@
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#f2f6fb;color:#26354d;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-.card{width:100%;max-width:760px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 10px 45px rgba(30,60,100,.08);overflow:hidden}
+/* =========================================================
+   ĐỨC MẠNH - GIA SƯ TOÁN
+   FULL STYLE.CSS
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #f2f6fb;
+
+    color: #26354d;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.card {
+    width: 100%;
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    min-height: 100vh;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 45px rgba(30, 60, 100, 0.08);
+}
+
+
+/* =========================================================
+   HERO / BANNER
+   ========================================================= */
+
 .hero {
     position: relative;
-    height: 310px;
 
-    background-image: url("assets/hero-bg.jpg");
+    width: 100%;
+
+    height: 330px;
+
+    background-image:
+        url("assets/hero-bg.jpg");
+
     background-size: cover;
+
     background-position: center center;
+
     background-repeat: no-repeat;
 
     overflow: visible;
 }
-.hero-overlay{position:absolute;inset:0;background:radial-gradient(circle at 15% 25%,rgba(255,255,255,.16),transparent 30%),radial-gradient(circle at 85% 70%,rgba(255,255,255,.12),transparent 32%)}
-.hero-content{position:relative;z-index:2;color:#fff;text-align:center;padding:55px 24px}
-.math-symbols{font-size:18px;opacity:.72;letter-spacing:1px}
-.hero h1{margin:24px 0 3px;font-size:40px;line-height:1.1;font-weight:850}
-.hero p{margin:0;font-size:19px;font-weight:600;opacity:.94}
-.avatar-wrap{position:absolute;z-index:10;left:50%;bottom:-78px;transform:translateX(-50%);width:158px;height:158px;padding:6px;border-radius:50%;background:#fff;box-shadow:0 12px 32px rgba(12,55,120,.25);overflow:hidden}
-.avatar{display:block;width:146px;height:146px;border-radius:50%;object-fit:cover;object-position:center 32%}
-.profile{padding:100px 24px 30px;text-align:center}
-.degree-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:18px;background:#edf5ff;color:#123f82;font-size:15px;text-align:left;line-height:1.35}
-.degree-icon{font-size:27px}
-.profile h2{max-width:640px;margin:22px auto 14px;color:#0e346c;font-size:22px;line-height:1.35}
-.lead{max-width:650px;margin:0 auto;color:#56657a;font-size:17px}
-.lead strong,.intro-box strong{color:#1268d8}
-.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:25px auto 0;max-width:650px}
-.action{display:flex;align-items:center;gap:12px;min-height:68px;padding:11px 14px;border:1px solid #e1e8f1;border-radius:17px;background:#fff;box-shadow:0 6px 18px rgba(30,55,90,.06);transition:.2s}
-.action:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(30,55,90,.1)}
-.action .icon{flex:0 0 46px;width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-weight:850;font-size:25px}
-.action b,.action small{display:block;text-align:left}
-.action b{font-size:15px;color:#153b76}
-.action small{margin-top:3px;color:#748197;font-size:12.5px}
-.call .icon{background:#e9f8ef;color:#15964a}.zalo .icon{background:#e9f3ff;color:#087eff;font-family:Arial}.facebook .icon{background:#eaf1ff;color:#1877f2;font-family:Arial}.contact .icon{background:#f1edff;color:#7047c8}
-.section{padding:12px 24px 18px}
-.section>h2{text-align:center;color:#10376e;font-size:24px;margin:12px 0 15px}
-.box{border:1px solid #e2e9f2;border-radius:20px;background:#fff;padding:20px;box-shadow:0 7px 22px rgba(25,50,90,.06)}
-.intro-box p{margin:0 0 13px;font-size:16px}.intro-box p:last-child{margin-bottom:0}
-.graduation-photo{display:block;width:100%;max-height:520px;object-fit:cover;border-radius:15px}
-.caption{text-align:center;margin:11px 0 0;color:#64748b;font-size:14px;font-weight:600}
-.section-note{text-align:center;color:#78869a;margin:-5px auto 15px}
-.reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.review{border:1px solid #e0e7f0;border-radius:17px;background:#f8fafc;padding:7px;overflow:hidden;box-shadow:0 5px 15px rgba(30,55,90,.05)}
-.review img{display:block;width:100%;height:auto;border-radius:12px}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.two-col .box h2{text-align:left;font-size:19px;margin:0 0 12px}
-ul{padding:0;margin:0;list-style:none}li{position:relative;padding:7px 0 7px 27px;font-size:15px;color:#435269}li:before{content:"✓";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:#e8f8f0;color:#1aaf68;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
-.closing{margin:8px 24px 18px;padding:18px 20px;text-align:center;border-radius:20px;background:linear-gradient(135deg,#eef7ff,#f1f7ff);border:1px solid #dce9f7}
-.closing h2{margin:0;color:#125cc7;font-size:23px}.closing p{margin:4px 0 0;color:#66758b;font-size:14px;font-style:italic}
-footer{text-align:center;padding:8px 24px 30px;color:#8a97a9;font-size:13px}
-@media(min-width:761px){body{padding:24px 0}.card{border-radius:25px}.hero{border-radius:25px 25px 0 0}}
-@media(max-width:600px){.hero{height:275px;background-position: center center;
-    background-size: cover; }.hero-content{padding:45px 18px}.hero h1{font-size:34px}.math-symbols{font-size:15px}.avatar-wrap{width:150px;height:150px;bottom:-75px}.avatar{width:138px;height:138px}.profile{padding:94px 18px 25px}.profile h2{font-size:20px}.lead{font-size:16px}.section{padding-left:18px;padding-right:18px}.section>h2{font-size:22px}.actions{gap:9px}.action{padding:10px 11px;gap:9px}.action .icon{flex-basis:42px;width:42px;height:42px;border-radius:12px}.action b{font-size:14px}.action small{font-size:11.5px}.box{padding:16px}.reviews{gap:9px}.two-col{grid-template-columns:1fr;gap:12px}.closing{margin-left:18px;margin-right:18px}}
-@media(max-width:400px){.hero{height:255px}.avatar-wrap{width:140px;height:140px;bottom:-70px}.avatar{width:128px;height:128px}.profile{padding-top:87px}.degree-badge{font-size:13.5px}.actions{grid-template-columns:1fr}.action{min-height:62px}.reviews{grid-template-columns:1fr}.intro-box p{font-size:15px}}
+
+
+/*
+   Lớp phủ rất nhẹ để banner nhìn mềm hơn
+*/
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 80, 190, 0.05),
+            rgba(0, 120, 235, 0.00),
+            rgba(0, 80, 190, 0.05)
+        );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ---------------------------------------------------------
+   Tên đã được chuyển xuống dưới avatar.
+   Không hiển thị tên ở banner nữa.
+   ========================================================= */
+
+.hero-content {
+    display: none;
+}
+
+
+/* =========================================================
+   AVATAR
+   ========================================================= */
+
+.avatar-wrap {
+    position: absolute;
+
+    z-index: 20;
+
+    left: 50%;
+
+    bottom: -82px;
+
+    transform:
+        translateX(-50%);
+
+    width: 166px;
+
+    height: 166px;
+
+    padding: 6px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 12px 35px rgba(20, 60, 120, 0.25);
+
+    overflow: hidden;
+}
+
+
+.avatar {
+    display: block;
+
+    width: 154px;
+
+    height: 154px;
+
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    object-position: center 32%;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile {
+    position: relative;
+
+    padding:
+        105px 24px 30px;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TÊN ĐỨC MẠNH
+   ========================================================= */
+
+.profile::before {
+    content: "Đức Mạnh";
+
+    display: block;
+
+    margin:
+        0 0 3px;
+
+    color:
+        #0b3978;
+
+    font-size:
+        40px;
+
+    line-height:
+        1.15;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        -0.5px;
+}
+
+
+/* =========================================================
+   CHỨC DANH
+   ========================================================= */
+
+.profile::after {
+    content:
+        "Gia sư Toán tại Hà Nội";
+
+    display: block;
+
+    margin:
+        0 auto 22px;
+
+    color:
+        #52627a;
+
+    font-size:
+        20px;
+
+    line-height:
+        1.4;
+
+    font-weight:
+        500;
+}
+
+
+/* =========================================================
+   BẰNG CẤP
+   ========================================================= */
+
+.degree-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding:
+        11px 20px;
+
+    margin:
+        0 auto;
+
+    border-radius:
+        18px;
+
+    background:
+        #edf5ff;
+
+    color:
+        #123f82;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.35;
+
+    text-align:
+        left;
+
+    box-shadow:
+        0 4px 12px rgba(20, 70, 140, 0.05);
+}
+
+
+.degree-icon {
+    flex-shrink: 0;
+
+    font-size:
+        29px;
+}
+
+
+/* =========================================================
+   TIÊU ĐỀ
+   ========================================================= */
+
+.profile h2 {
+    max-width:
+        650px;
+
+    margin:
+        22px auto 14px;
+
+    color:
+        #0e346c;
+
+    font-size:
+        22px;
+
+    line-height:
+        1.4;
+
+    font-weight:
+        750;
+}
+
+
+/* =========================================================
+   MÔ TẢ
+   ========================================================= */
+
+.lead {
+    max-width:
+        650px;
+
+    margin:
+        0 auto;
+
+    color:
+        #56657a;
+
+    font-size:
+        17px;
+
+    line-height:
+        1.65;
+}
+
+
+.lead strong,
+.intro-box strong {
+    color:
+        #1268d8;
+
+    font-weight:
+        750;
+}
+
+
+/* =========================================================
+   ACTIONS / LIÊN HỆ
+   ========================================================= */
+
+.actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        12px;
+
+    width:
+        100%;
+
+    max-width:
+        650px;
+
+    margin:
+        25px auto 0;
+}
+
+
+/* =========================================================
+   ACTION CARD
+   ========================================================= */
+
+.action {
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        12px;
+
+    min-height:
+        68px;
+
+    padding:
+        11px 14px;
+
+    border:
+        1px solid #e1e8f1;
+
+    border-radius:
+        17px;
+
+    background:
+        #ffffff;
+
+    color:
+        #153b76;
+
+    box-shadow:
+        0 6px 18px rgba(30, 55, 90, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.action:hover {
+    transform:
+        translateY(-2px);
+
+    border-color:
+        #d2e0f3;
+
+    box-shadow:
+        0 10px 24px rgba(30, 55, 90, 0.11);
+}
+
+
+.action:active {
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   ACTION ICON
+   ========================================================= */
+
+.action .icon {
+    flex:
+        0 0 46px;
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        13px;
+
+    font-size:
+        25px;
+
+    font-weight:
+        850;
+}
+
+
+/* =========================================================
+   CALL
+   ========================================================= */
+
+.call .icon {
+    background:
+        #e9f8ef;
+
+    color:
+        #15964a;
+}
+
+
+/* =========================================================
+   ZALO
+   ========================================================= */
+
+.zalo .icon {
+    background:
+        #e9f3ff;
+
+    color:
+        #087eff;
+
+    font-family:
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================================
+   FACEBOOK
+   ========================================================= */
+
+.facebook .icon {
+    background:
+        #eaf1ff;
+
+    color:
+        #1877f2;
+
+    font-family:
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact .icon {
+    background:
+        #f1edff;
+
+    color:
+        #7047c8;
+}
+
+
+/* =========================================================
+   ACTION TEXT
+   ========================================================= */
+
+.action b,
+.action small {
+    display:
+        block;
+
+    text-align:
+        left;
+}
+
+
+.action b {
+    color:
+        #153b76;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.3;
+
+    font-weight:
+        800;
+}
+
+
+.action small {
+    margin-top:
+        3px;
+
+    color:
+        #748197;
+
+    font-size:
+        12.5px;
+
+    line-height:
+        1.3;
+
+    font-weight:
+        500;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.section {
+    padding:
+        12px 24px 18px;
+}
+
+
+.section > h2 {
+    margin:
+        12px 0 15px;
+
+    color:
+        #10376e;
+
+    font-size:
+        24px;
+
+    line-height:
+        1.35;
+
+    font-weight:
+        800;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================================
+   BOX
+   ========================================================= */
+
+.box {
+    padding:
+        20px;
+
+    border:
+        1px solid #e2e9f2;
+
+    border-radius:
+        20px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 7px 22px rgba(25, 50, 90, 0.06);
+}
+
+
+/* =========================================================
+   GIỚI THIỆU
+   ========================================================= */
+
+.intro-box p {
+    margin:
+        0 0 13px;
+
+    color:
+        #435269;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.7;
+}
+
+
+.intro-box p:last-child {
+    margin-bottom:
+        0;
+}
+
+
+/* =========================================================
+   ẢNH TỐT NGHIỆP
+   ========================================================= */
+
+.graduation-photo {
+    display:
+        block;
+
+    width:
+        100%;
+
+    max-height:
+        520px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        15px;
+}
+
+
+.caption {
+    margin:
+        11px 0 0;
+
+    color:
+        #64748b;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.5;
+
+    font-weight:
+        600;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================================
+   PHẢN HỒI
+   ========================================================= */
+
+.section-note {
+    max-width:
+        600px;
+
+    margin:
+        -5px auto 15px;
+
+    color:
+        #78869a;
+
+    font-size:
+        14px;
+
+    text-align:
+        center;
+}
+
+
+.reviews {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        12px;
+}
+
+
+.review {
+    padding:
+        7px;
+
+    border:
+        1px solid #e0e7f0;
+
+    border-radius:
+        17px;
+
+    background:
+        #f8fafc;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 5px 15px rgba(30, 55, 90, 0.05);
+}
+
+
+.review img {
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    border-radius:
+        12px;
+}
+
+
+/* =========================================================
+   TWO COLUMNS
+   ========================================================= */
+
+.two-col {
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        14px;
+}
+
+
+.two-col .box h2 {
+    margin:
+        0 0 12px;
+
+    color:
+        #10376e;
+
+    font-size:
+        19px;
+
+    line-height:
+        1.4;
+
+    font-weight:
+        800;
+
+    text-align:
+        left;
+}
+
+
+/* =========================================================
+   LIST
+   ========================================================= */
+
+ul {
+    margin:
+        0;
+
+    padding:
+        0;
+
+    list-style:
+        none;
+}
+
+
+li {
+    position:
+        relative;
+
+    padding:
+        7px 0 7px 27px;
+
+    color:
+        #435269;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.5;
+}
+
+
+li::before {
+    content:
+        "✓";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        7px;
+
+    width:
+        20px;
+
+    height:
+        20px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        #e8f8f0;
+
+    color:
+        #1aaf68;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.closing {
+    margin:
+        8px 24px 18px;
+
+    padding:
+        18px 20px;
+
+    border:
+        1px solid #dce9f7;
+
+    border-radius:
+        20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef7ff,
+            #f1f7ff
+        );
+
+    text-align:
+        center;
+}
+
+
+.closing h2 {
+    margin:
+        0;
+
+    color:
+        #125cc7;
+
+    font-size:
+        23px;
+
+    line-height:
+        1.4;
+
+    font-weight:
+        800;
+}
+
+
+.closing p {
+    margin:
+        4px 0 0;
+
+    color:
+        #66758b;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.6;
+
+    font-style:
+        italic;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding:
+        8px 24px 30px;
+
+    color:
+        #8a97a9;
+
+    font-size:
+        13px;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 761px) {
+
+    body {
+        padding:
+            24px 0;
+    }
+
+    .card {
+        border-radius:
+            25px;
+    }
+
+    .hero {
+        border-radius:
+            25px 25px 0 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .card {
+        box-shadow:
+            none;
+    }
+
+
+    /* Banner */
+
+    .hero {
+        height:
+            275px;
+
+        background-size:
+            cover;
+
+        background-position:
+            center center;
+    }
+
+
+    /* Avatar */
+
+    .avatar-wrap {
+        width:
+            150px;
+
+        height:
+            150px;
+
+        bottom:
+            -75px;
+    }
+
+
+    .avatar {
+        width:
+            138px;
+
+        height:
+            138px;
+    }
+
+
+    /* Profile */
+
+    .profile {
+        padding:
+            94px 18px 25px;
+    }
+
+
+    /* Name */
+
+    .profile::before {
+        margin-bottom:
+            2px;
+
+        font-size:
+            32px;
+    }
+
+
+    /* Job title */
+
+    .profile::after {
+        margin-bottom:
+            19px;
+
+        font-size:
+            18px;
+    }
+
+
+    /* Degree */
+
+    .degree-badge {
+        padding:
+            10px 16px;
+
+        font-size:
+            14px;
+    }
+
+
+    .degree-icon {
+        font-size:
+            26px;
+    }
+
+
+    /* Tagline */
+
+    .profile h2 {
+        font-size:
+            20px;
+    }
+
+
+    /* Description */
+
+    .lead {
+        font-size:
+            16px;
+    }
+
+
+    /* Sections */
+
+    .section {
+        padding-left:
+            18px;
+
+        padding-right:
+            18px;
+    }
+
+
+    .section > h2 {
+        font-size:
+            22px;
+    }
+
+
+    /* Actions */
+
+    .actions {
+        gap:
+            9px;
+    }
+
+
+    .action {
+        min-height:
+            64px;
+
+        gap:
+            9px;
+
+        padding:
+            10px 11px;
+
+        border-radius:
+            15px;
+    }
+
+
+    .action .icon {
+        flex:
+            0 0 42px;
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        border-radius:
+            12px;
+
+        font-size:
+            22px;
+    }
+
+
+    .action b {
+        font-size:
+            14px;
+    }
+
+
+    .action small {
+        font-size:
+            11.5px;
+    }
+
+
+    /* Box */
+
+    .box {
+        padding:
+            16px;
+
+        border-radius:
+            17px;
+    }
+
+
+    /* Reviews */
+
+    .reviews {
+        gap:
+            9px;
+    }
+
+
+    /* Two columns */
+
+    .two-col {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+    }
+
+
+    /* Closing */
+
+    .closing {
+        margin-left:
+            18px;
+
+        margin-right:
+            18px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+        height:
+            255px;
+    }
+
+
+    .avatar-wrap {
+        width:
+            140px;
+
+        height:
+            140px;
+
+        bottom:
+            -70px;
+    }
+
+
+    .avatar {
+        width:
+            128px;
+
+        height:
+            128px;
+    }
+
+
+    .profile {
+        padding-top:
+            86px;
+    }
+
+
+    .profile::before {
+        font-size:
+            29px;
+    }
+
+
+    .profile::after {
+        font-size:
+            17px;
+
+        margin-bottom:
+            17px;
+    }
+
+
+    .degree-badge {
+        font-size:
+            13.5px;
+
+        padding:
+            9px 14px;
+    }
+
+
+    .profile h2 {
+        font-size:
+            19px;
+    }
+
+
+    .lead {
+        font-size:
+            15px;
+    }
+
+
+    /* Các nút liên hệ xếp dọc */
+
+    .actions {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .action {
+        min-height:
+            63px;
+    }
+
+
+    /* Phản hồi xếp dọc */
+
+    .reviews {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .intro-box p {
+        font-size:
+            15px;
+    }
+
+
+    .closing h2 {
+        font-size:
+            21px;
+    }
+
+}
